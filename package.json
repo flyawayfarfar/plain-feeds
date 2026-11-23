@@ -1,0 +1,16 @@
+{
+  "name": "plain-feeds",
+  "version": "0.1.0",
+  "description": "Plain Feeds: a simple, private RSS and Atom reader browser extension",
+  "scripts": {
+    "test": "node build.mjs --test && node --test --test-concurrency=1 tests/e2e.test.mjs",
+    "build": "node build.mjs",
+    "lint:firefox": "web-ext lint --source-dir dist/firefox"
+  },
+  "type": "module",
+  "devDependencies": {
+    "playwright": "^1.65.1",
+    "web-ext": "^10.8.0"
+  },
+  "private": "true"
+}

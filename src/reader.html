@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plain Feeds</title>
+  <link rel="stylesheet" href="reader.css">
+  <script type="module" src="reader.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Plain Feeds</h1>
+    <form id="add-form">
+      <input id="add-url" type="text" placeholder="Feed or website address" aria-label="Feed or website address" autocomplete="off" required>
+      <button type="submit">Add feed</button>
+    </form>
+    <div class="tools">
+      <button id="refresh" type="button">Refresh all</button>
+      <label class="button" for="import-file">Import OPML</label>
+      <input id="import-file" type="file" accept=".opml,.xml,text/xml,application/xml" hidden>
+      <button id="export" type="button">Export OPML</button>
+    </div>
+  </header>
+  <div id="notice" role="status" hidden></div>
+  <main>
+    <nav id="feeds" aria-label="Feeds"></nav>
+    <section id="items-pane" aria-label="Articles">
+      <div class="items-head">
+        <h2 id="items-title">All feeds</h2>
+        <div>
+          <label><input id="unread-only" type="checkbox"> Unread only</label>
+          <button id="mark-all" type="button">Mark all read</button>
+          <button id="remove-feed" type="button" hidden>Remove feed</button>
+        </div>
+      </div>
+      <ol id="items"></ol>
+      <div id="empty" hidden>
+        <p id="empty-text"></p>
+        <div id="examples" hidden>
+          <span>Not sure where to start? Try an example:</span>
+          <button type="button" data-url="https://feeds.bbci.co.uk/news/world/rss.xml">BBC World News</button>
+          <button type="button" data-url="https://xkcd.com/atom.xml">xkcd comics</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Your feeds and reading history stay in this browser. No account, no tracking. Built with AI assistance.</footer>
+</body>
+</html>

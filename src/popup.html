@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plain Feeds</title>
+  <link rel="stylesheet" href="reader.css">
+  <style>
+    body { width: 320px; padding: 14px; }
+    h2 { margin: 12px 0 6px; font-size: 14px; }
+    ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+    li { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+    li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    #open { width: 100%; }
+    p { color: var(--muted); margin: 6px 0 0; }
+  </style>
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <button id="open" class="primary" type="button">Open reader</button>
+  <h2>Feeds on this page</h2>
+  <ul id="found"></ul>
+  <p id="none" hidden>No feeds found on this page.</p>
+</body>
+</html>
