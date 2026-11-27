@@ -8,7 +8,8 @@ const version = '0.1.0';
 
 const base = {
   manifest_version: 3,
-  name: 'Plain Feeds',
+  name: 'Plain Feeds — Private RSS Reader',
+  short_name: 'Plain Feeds',
   version,
   description: 'A simple, private RSS and Atom reader. No account, no tracking. Import your feeds from any reader with OPML.',
   icons: { 16: 'icons/16.png', 32: 'icons/32.png', 48: 'icons/48.png', 128: 'icons/128.png' },
